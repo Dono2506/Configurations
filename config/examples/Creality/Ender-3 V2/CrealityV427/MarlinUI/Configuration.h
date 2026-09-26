@@ -1,73 +1,3 @@
-/**
- * Marlin 3D Printer Firmware
- * Copyright (c) 2024 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
- *
- * Based on Sprinter and grbl.
- * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
- */
-#pragma once
-#error "Don't build with import-2.1.x configurations!"
-#error "Use the 'bugfix...' or 'release...' configurations matching your Marlin version."
-
-/**
- * Configuration.h
- *
- * Basic settings such as:
- *
- * - Type of electronics
- * - Type of temperature sensor
- * - Printer geometry
- * - Endstop configuration
- * - LCD controller
- * - Extra features
- *
- * Advanced settings can be found in Configuration_adv.h
- */
-#define CONFIGURATION_H_VERSION 02010300
-
-//===========================================================================
-//============================= Getting Started =============================
-//===========================================================================
-
-/**
- * Here are some useful links to help get your machine configured and calibrated:
- *
- * Example Configs:     https://github.com/MarlinFirmware/Configurations/branches/all
- *
- * Průša Calculator:    https://blog.prusa3d.com/calculator_3416/
- *
- * Calibration Guides:  https://reprap.org/wiki/Calibration
- *                      https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide
- *                      https://web.archive.org/web/20220907014303/sites.google.com/site/repraplogphase/calibration-of-your-reprap
- *                      https://youtu.be/wAL9d7FgInk
- *                      https://teachingtechyt.github.io/calibration.html
- *
- * Calibration Objects: https://www.thingiverse.com/thing:5573
- *                      https://www.thingiverse.com/thing:1278865
- */
-
-// @section info
-
-// Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Scott Lahteine)" // Original author or contributor.
-//#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
-
-// @section machine
-
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
   #define MOTHERBOARD BOARD_CREALITY_V427
@@ -673,14 +603,14 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
-#define HEATER_1_MAXTEMP 275
-#define HEATER_2_MAXTEMP 275
-#define HEATER_3_MAXTEMP 275
-#define HEATER_4_MAXTEMP 275
-#define HEATER_5_MAXTEMP 275
-#define HEATER_6_MAXTEMP 275
-#define HEATER_7_MAXTEMP 275
+#define HEATER_0_MAXTEMP 280
+#define HEATER_1_MAXTEMP 280
+#define HEATER_2_MAXTEMP 280
+#define HEATER_3_MAXTEMP 280
+#define HEATER_4_MAXTEMP 280
+#define HEATER_5_MAXTEMP 280
+#define HEATER_6_MAXTEMP 280
+#define HEATER_7_MAXTEMP 280
 #define BED_MAXTEMP      120
 #define CHAMBER_MAXTEMP  60
 
@@ -2561,9 +2491,9 @@
 //
 // Preheat Constants - Up to 10 are supported without changes
 //
-#define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 185
-#define PREHEAT_1_TEMP_BED     45
+#define PREHEAT_1_LABEL       "PLA+"
+#define PREHEAT_1_TEMP_HOTEND 230
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
